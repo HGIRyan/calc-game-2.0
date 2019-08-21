@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { Link } from 'react-router-dom'
 export function CalcWrapper({ text, children, loading }) {
   let wrapper =
     <Calc>
@@ -25,6 +26,7 @@ export function CalcWrapper({ text, children, loading }) {
   return <>{loading ? loadingVis : wrapper}</>
 
 }
+
 export const Calc = styled.div`
     border: solid black 1px;
     height: 510px;
@@ -107,6 +109,10 @@ export const NoDiv = styled.div`
  border: ${props => props.border ? props.border : 0};
  height: ${props => props.height ? props.height : 'auto'};
  width: ${props => props.width ? props.width : 'auto'};`
+
+export const StyledLink = styled(Link)`
+`;
+
 export default {
   CalcWrapper,
   Screen,
@@ -114,5 +120,6 @@ export default {
   AdSpace,
   Button,
   ButtonRow,
-  ScreenRow
+  ScreenRow,
+  StyledLink
 }

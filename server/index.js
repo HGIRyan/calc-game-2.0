@@ -32,7 +32,7 @@ app.use(session({
 // });
 // *** ENDPOINTS *** //
 app.get('/api/level/:level', levels.levelSelect)
-
+app.get('/api/all/levels', levels.all)
 // *** IM LISTENING! *** //
 
 app.listen(SERVER_PORT, () => console.log(`Listening on PORT: ${SERVER_PORT}`));
