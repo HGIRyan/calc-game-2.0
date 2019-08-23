@@ -63,7 +63,7 @@ class LevelPlay extends Component {
             } else if (opp === '-') {
                 await this.setState({ result: result - num, moves: moves - 1 })
             } else if (opp === '=>') {
-                let res = await result.toString().split('').map(it => parseInt(it) === num[0] ? it = num[1] : it).join('')
+                let res = await parseInt(result.toString().split('').map(it => parseInt(it) === num[0] ? it = num[1] : it).join(''))
                 await this.setState({ result: res, moves: moves - 1 })
             } else if (opp === '²') {
                 await this.setState({ result: result * result, moves: moves - 1 })

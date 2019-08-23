@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Switch, Route, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import './App.css'
+import { createBrowserHistory } from 'history';
 
+import { NoDiv } from './wrapper'
 import Levelplay from './components/Levelplay'
 import Home from './components/Home'
 import Create from './components/Create'
+const history = createBrowserHistory();
 
 class App extends Component {
   constructor() {
@@ -22,6 +25,10 @@ class App extends Component {
           <Route path='/create' component={Create} />
           <Route path='/level/:level' component={Levelplay} />
         </Switch>
+        <NoDiv>
+          <button onClick={() => history.goBack()}>Back</button>
+          <button onClick={() => history.goForward()}>Forward</button>
+        </NoDiv>
       </div>
     )
   }

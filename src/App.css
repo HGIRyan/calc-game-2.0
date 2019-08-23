@@ -220,3 +220,6 @@ textarea {
 .rep:hover{
   cursor: pointer;
 }
+input {
+  width: 20%
+}

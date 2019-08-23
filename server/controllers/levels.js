@@ -5,6 +5,9 @@ module.exports = {
     },
     all: (req, res) => {
         res.status(200).send({ msg: 'GOOD', levels: levels.levels })
+    },
+    add: (req, res) => {
+
     }
 }
 levels = {
